@@ -1,0 +1,40 @@
+@font-face {
+    font-family:Manrope;
+    src: url('./assets/fonts/Manrope/static/Manrope-Bold.ttf');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: Manrope;
+    src: url('./assets/fonts/Manrope/static/Manrope-Medium.ttf');
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family:Manrope;
+    src: url('./assets/fonts/Manrope/static/Manrope-Light.ttf');
+    font-weight: 200;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: left;
+    line-height: 2;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+  }
+  
+  body {
+    font-family: Manrope;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+.ServicePage{
+    margin:30px 100px;
+}

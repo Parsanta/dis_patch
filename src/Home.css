@@ -1,0 +1,219 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*fonts*/
+@font-face {
+  font-family:Manrope;
+  src: url('./assets/fonts/Manrope/static/Manrope-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url('./assets/fonts/Manrope/static/Manrope-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family:Manrope;
+  src: url('./assets/fonts/Manrope/static/Manrope-Light.ttf');
+  font-weight: 200;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: left;
+  line-height: 2;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-family: Manrope;
+  overflow-x: hidden;
+  position: relative;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* NAVBAR CSS */
+
+/* BANNER CSS */
+.banner {
+  margin: 50px 0 70px 0;
+}
+
+.banner h1{
+  margin-top: 40px;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.banner img{
+  margin-top: 0px;
+}
+
+.banner Button{
+  margin:4px 4px;
+}
+
+/* CHOOSE CSS */
+.Choose img{
+  width: 90%;
+  margin-top: 30px;
+}
+
+.Choose h1{
+  font-size: 60px;
+  font-weight: 700;
+  text-align: left;
+  margin-left: 100px;
+}
+.carousel-caption h1{
+  color: rgb(255, 98, 0) !important;
+  font-size: 50px;
+  margin-left: 0 !important;
+}
+
+.carousel-caption p{
+  font-size: 20px;
+}
+
+.carousel-caption{
+  color: black;
+  text-align: left;
+  padding-bottom: 80px;
+}
+
+/* HomeABout CSS */
+.HomeAbout h1{
+  margin-top: 30px;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.HomeAbout img{
+  width: 80%;
+  height: auto;
+  margin-left: 150px;
+}
+
+.HomeAbout p{
+ margin-top: 10px;
+ margin-bottom: 20px
+}
+
+.HomeAbout {
+  margin-top: 90px;
+}
+
+/* track css*/
+.Hometrack h1{
+  margin-top: 100px;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.Hometrack img{
+  width: 85%;
+  height: auto;
+  margin-top:60px;
+}
+
+/* HomeReview css*/
+
+.HomeReview img{
+  width: 85%;
+  height: auto;
+  margin-top: 100px;
+}
+
+.revText h1{
+  margin-top: 100px;
+  margin-left: 90px;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.revText .carousel{
+  margin-right: 0;
+  margin-left: 90px;
+  margin-top: 30px;
+}
+
+.card{
+  border-color:transparent;
+  border-radius: 30px;
+}
+ .blockquote p{
+  max-width: 90%;
+  padding-left: 85px;
+ }
+
+ /* FOOTER CSS*/
+
+ .Footer{
+  margin-top: 100px;
+ }
+ .Footer h1{
+  color: orangered;
+  font-size: 30px;
+  font-weight: 400;
+ }
+
+.Footer p{
+  font-size: 17px;
+}
+
+.Footer img{
+  width: 40%;
+}
+
+.image{
+  width: 8% !important;
+  margin-right: 20px;
+}
