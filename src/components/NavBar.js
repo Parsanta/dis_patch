@@ -17,7 +17,7 @@ export const NavBar=()=> {
             <Nav.Link href="/service">Services</Nav.Link>           
             <Nav.Link href="/About">About</Nav.Link>
             <Nav.Link href="/cart"><img src={cart} style={{ width: "35px" }}/></Nav.Link>
-            <Button variant="danger" size="md">Contact</Button>                
+            <Button variant="danger" size="md" href='/contact'>Contact</Button>                
           </Nav>
         </Navbar.Collapse>
       </Container>
