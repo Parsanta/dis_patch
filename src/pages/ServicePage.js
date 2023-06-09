@@ -1,29 +1,55 @@
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import React, { useState, useEffect } from 'react';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-export const ServicePage = ({ GroceryItems, MedicineItems, SnacksItems, handleAddToCart }) => {
+export const ServicePage = ({ MedicineItems, SnacksItems}) => {
+  
+
+  const handleAddToCart = (item) => {
+    setCartItems([...cartItems, item]);
+    console.log(cartItems);
+  };
+  const [groceries, setGroceries] = useState([]);
+
+  useEffect(() => {
+    fetchGroceries();
+  }, []);
+
+  const fetchGroceries = async () => {
+    try {
+      const response = await fetch('https://fakestoreapi.com/products');
+      const data = await response.json();
+      setGroceries(data);
+    } catch (error) {
+      console.error('Error fetching groceries:', error);
+    }
+  };
+
+  const truncateTitle = (title, maxLength) => {
+    if (title.length > maxLength) {
+      return title.slice(0, maxLength) + '...';
+    }
+    return title;
+  };
 
   return (
     <div className="ServicePage">
-      <Tabs
-        defaultActiveKey="grocery"
-        id="justify-tab-example"
-        className="mb-3"
-        justify
-      >
-        <Tab eventKey={"grocery"} title="Grocery">
+      <Tabs defaultActiveKey="grocery" id="justify-tab-example" className="mb-3" justify>
+        <Tab eventKey="grocery" title="Grocery">
           <div className="row">
-            {GroceryItems.map((GroceryItem, index) => (
+            {groceries.map((grocery, index) => (
               <div className="col-md-4 mb-3" key={index}>
                 <Card>
-                  <Card.Img variant="top" src={GroceryItem.img} />
+                  <Card.Img variant="top" src={grocery.image} className="card-img" />
                   <Card.Body>
-                    <Card.Title>{GroceryItem.name}</Card.Title>
+                    <Card.Title className="card-title">
+                      {truncateTitle(grocery.title, 30)}
+                    </Card.Title>
                     <Button
                       variant="primary"
-                      onClick={() => handleAddToCart(GroceryItem)}
+                      onClick={() => handleAddToCart(grocery)}
                     >
                       Add to cart
                     </Button>
@@ -33,14 +59,16 @@ export const ServicePage = ({ GroceryItems, MedicineItems, SnacksItems, handleAd
             ))}
           </div>
         </Tab>
-        <Tab eventKey={"Medicine"} title="Medicine">
+        <Tab eventKey="Medicine" title="Medicine">
           <div className="row">
             {MedicineItems.map((MedicineItem, index) => (
               <div className="col-md-4 mb-3" key={index}>
                 <Card>
-                  <Card.Img variant="top" src={MedicineItem.img} />
+                  <Card.Img variant="top" src={MedicineItem.img} className="card-img" />
                   <Card.Body>
-                    <Card.Title>{MedicineItem.name}</Card.Title>
+                    <Card.Title className="card-title">
+                      {truncateTitle(MedicineItem.name, 30)}
+                    </Card.Title>
                     <Button
                       variant="primary"
                       onClick={() => handleAddToCart(MedicineItem)}
@@ -53,14 +81,16 @@ export const ServicePage = ({ GroceryItems, MedicineItems, SnacksItems, handleAd
             ))}
           </div>
         </Tab>
-        <Tab eventKey={"Snacks"} title="Snacks">
+        <Tab eventKey="Snacks" title="Snacks">
           <div className="row">
             {SnacksItems.map((SnakesItem, index) => (
               <div className="col-md-4 mb-3" key={index}>
                 <Card>
-                  <Card.Img variant="top" src={SnakesItem.img} />
+                  <Card.Img variant="top" src={SnakesItem.img} className="card-img" />
                   <Card.Body>
-                    <Card.Title>{SnakesItem.name}</Card.Title>
+                    <Card.Title className="card-title">
+                      {truncateTitle(SnakesItem.name, 30)}
+                    </Card.Title>
                     <Button
                       variant="primary"
                       onClick={() => handleAddToCart(SnakesItem)}
@@ -77,3 +107,5 @@ export const ServicePage = ({ GroceryItems, MedicineItems, SnacksItems, handleAd
     </div>
   );
 };
+
+export default ServicePage;

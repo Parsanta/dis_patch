@@ -1,7 +1,6 @@
 import BannerImg from "../assets/img/banner-img.svg";
 import { Container, Row, Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import { ContactPage } from "../pages/ContactPage";
 export const Banner = () => {
   return (
     <section className="banner" >

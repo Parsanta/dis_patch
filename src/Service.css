@@ -38,3 +38,13 @@
 .ServicePage{
     margin:30px 100px;
 }
+.card-img {
+  height: 300px; 
+  width: 300px;
+}
+
+.card-title {
+  height: 60px; /* Adjust the height to your desired size */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
