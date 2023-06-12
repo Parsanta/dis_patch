@@ -3,19 +3,19 @@ const data =  {
     GroceryItems: [
         {
             id:"1",
-            name:"surfexcel",
+            title:"surfexcel",
             price:"999",
             img : chooseImg,
         },
         {
             id:"2",
-            name:"Bonus",
+            title:"Bonus",
             price:"1000",
             img : chooseImg,
         },
         {
             id:"3",
-            name:"Ariel",
+            title:"Ariel",
             price:"9999",
             img : chooseImg,
         },
@@ -23,19 +23,19 @@ const data =  {
     MedicineItems: [
         {
             id:"1",
-            name:"Brufen",
+            title:"Brufen",
             price:"99",
             img : chooseImg,
         },
         {
             id:"2",
-            name:"panadol",
+            title:"panadol",
             price:"100",
             img : chooseImg,
         },
         {
             id:"3",
-            name:"Rigix",
+            title:"Rigix",
             price:"69",
             img : chooseImg,
         },
@@ -43,19 +43,19 @@ const data =  {
     SnacksItems: [
         {
             id:"1",
-            name:"Cheetos",
+            title:"Cheetos",
             price:"99",
             img : chooseImg,
         },
         {
             id:"2",
-            name:"Cola",
+            title:"Cola",
             price:"100",
             img : chooseImg,
         },
         {
             id:"3",
-            name:"Slice",
+            title:"Slice",
             price:"59",
             img : chooseImg,
         },

@@ -4,13 +4,10 @@ import Tabs from 'react-bootstrap/Tabs';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-export const ServicePage = ({ MedicineItems, SnacksItems}) => {
+export const ServicePage = ({ MedicineItems, SnacksItems,handleAddToCart,setCartItems}) => {
   
 
-  const handleAddToCart = (item) => {
-    setCartItems([...cartItems, item]);
-    console.log(cartItems);
-  };
+ 
   const [groceries, setGroceries] = useState([]);
 
   useEffect(() => {
@@ -67,7 +64,7 @@ export const ServicePage = ({ MedicineItems, SnacksItems}) => {
                   <Card.Img variant="top" src={MedicineItem.img} className="card-img" />
                   <Card.Body>
                     <Card.Title className="card-title">
-                      {truncateTitle(MedicineItem.name, 30)}
+                      {truncateTitle(MedicineItem.title, 30)}
                     </Card.Title>
                     <Button
                       variant="primary"
@@ -89,7 +86,7 @@ export const ServicePage = ({ MedicineItems, SnacksItems}) => {
                   <Card.Img variant="top" src={SnakesItem.img} className="card-img" />
                   <Card.Body>
                     <Card.Title className="card-title">
-                      {truncateTitle(SnakesItem.name, 30)}
+                      {truncateTitle(SnakesItem.title, 30)}
                     </Card.Title>
                     <Button
                       variant="primary"

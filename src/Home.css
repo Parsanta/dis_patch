@@ -217,3 +217,30 @@ img {
   width: 8% !important;
   margin-right: 20px;
 }
+
+
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-icon {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #f03265; /* Set your desired background color */
+  color: #fff;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
