@@ -34,7 +34,7 @@ export const ServicePage = ({ MedicineItems, SnacksItems,handleAddToCart,setCart
   return (
     <div className="ServicePage">
       <Tabs defaultActiveKey="grocery" id="justify-tab-example" className="mb-3" justify>
-        <Tab eventKey="grocery" title="Grocery">
+        <Tab eventKey="grocery" title="ALL">
           <div className="row">
             {groceries.map((grocery, index) => (
               <div className="col-md-4 mb-3" key={index}>

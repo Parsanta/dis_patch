@@ -1,0 +1,75 @@
+/* Basic styling for the contact form container */
+.ContactForm {
+    background-color: #f2f2f2;
+    padding: 40px 0;
+  }
+  
+  /* Center the form inside the container */
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Style the form itself */
+  .contactForm {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the form inputs and text area */
+  .formInput {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  /* Style the submit button */
+  .submit-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the submit button */
+  .submit-btn:hover {
+    background-color: #ca1628;
+  }
+  
+  /* Center text in the form rows */
+  .formRow {
+    text-align: center;
+  }
+  
+  /* Style the form labels */
+  label {
+    font-weight: bold;
+  }
+  
+  /* Add some spacing for the form labels */
+  .formRow label {
+    margin-right: 10px;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media screen and (max-width: 480px) {
+    .contactForm {
+      padding: 15px;
+    }
+    .formInput,
+    .submit-btn {
+      font-size: 14px;
+    }
+  }
+  

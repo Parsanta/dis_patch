@@ -3,7 +3,6 @@ import { CartContext } from '../App';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
-
 export const CartPage = () => {
   const { cartItems, setCartItems } = useContext(CartContext);
 
@@ -11,6 +10,8 @@ export const CartPage = () => {
     const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
     setCartItems(updatedCartItems);
   };
+
+  const totalAmount = cartItems.reduce((total, item) => total + item.price, 0);
 
   return (
     <div className="CartPage">
@@ -29,7 +30,10 @@ export const CartPage = () => {
               <td>{item.title}</td>
               <td>{item.price}</td>
               <td>
-                <Button variant="danger" onClick={() => handleRemoveItem(item.id)}>
+                <Button
+                  variant="danger"
+                  onClick={() => handleRemoveItem(item.id)}
+                >
                   Remove
                 </Button>
               </td>
@@ -37,6 +41,7 @@ export const CartPage = () => {
           ))}
         </tbody>
       </Table>
+      <p>Total Amount: {totalAmount}</p>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState, useEffect, createContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
 import "./Service.css";
+import "./contact.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
